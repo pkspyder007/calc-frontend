@@ -7,11 +7,16 @@ type ButtonPressed={
 
 
 export default class Keypad extends Component<{}, ButtonPressed> {
+
+   handleClick = (e:any) => {
+      console.log(e.target.name)
+   }
+
    render(){
        return(   
         <div className="calculator">
                 <div className="keypad">
-                    <button name="AC" className="dark-gray"  >AC</button>
+                    <button name="AC" className="dark-gray" onClick={this.handleClick} >AC</button>
                     <button name="back"  className="dark-gray">back</button>
                     <button name="%"  className="dark-gray" > %</button>
                     <button name="/"  className="dark-gray">/</button>
@@ -22,7 +27,7 @@ export default class Keypad extends Component<{}, ButtonPressed> {
                     <button name="+" className="dark-gray" >+</button>
     
     
-                    <button name="4" className="gray">4</button>
+                    <button name="4" className="gray" onClick={this.handleClick}>4</button>
                     <button name="5" className="gray">5</button>
                     <button name="6" className="gray" >6</button>
                     <button name="-" className=" dark-gray">-</button>

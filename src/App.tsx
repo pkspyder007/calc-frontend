@@ -26,7 +26,7 @@ export default class App extends React.Component <{}> {
       
         <p> 
          <Output  result = {this.state.result}/>
-         <Keypad buttonPressed={this.buttonPressed}/>
+         <Keypad />
         
         </p>
         
